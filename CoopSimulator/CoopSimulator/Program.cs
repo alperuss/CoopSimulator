@@ -8,8 +8,9 @@ namespace CoopSimulator
 {
     class Program
     {
-        public static List<Data.PoultryDto> PoultryList = new List<PoultryDto>();
+        public static PoultryHandler PoultryHandler = new PoultryHandler();
 
+        public static List<Data.PoultryDto> PoultryList = new List<PoultryDto>();
         public static Data.ConfigurationDto.Configuration Configuration { get; set; }
         public static Data.DateDto Date { get; set; }
         static void Main(string[] args)
@@ -22,6 +23,10 @@ namespace CoopSimulator
             {
                 Date = new DateTime(2000,1,1)
             };
+
+            Console.WriteLine("WELCOME TO COOP SIMULATOR OF " + Configuration.PoultryDetail.Name);
+
+            //TODO: Util Fire
         }
 
         public static void DatePeriodTriggered(object sender ,EventArgs args)

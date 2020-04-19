@@ -16,7 +16,6 @@ namespace CoopSimulator
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Hello World!");
             Configuration = Util.Configuration();
             Date = new DateDto(Configuration.GlobalSetting.Reporting.DatePeriod,
                 Configuration.GlobalSetting.Reporting.Value, DatePeriodTriggered)
@@ -27,6 +26,8 @@ namespace CoopSimulator
             Console.WriteLine("WELCOME TO COOP SIMULATOR OF " + Configuration.PoultryDetail.Name);
 
             //TODO: Util Fire
+            Util.Init();
+            Console.ReadLine();
         }
 
         public static void DatePeriodTriggered(object sender ,EventArgs args)

@@ -17,7 +17,7 @@ namespace CoopSimulator.Data
             public DurationOfPregnancy DurationOfPregnancy { get; set; }
             public AdolescenceAge AdolescenceAge { get; set; }
             public OldAge OldAge { get; set; }
-            public NumberOfBabiesForEachPregnancy NumberOfBabiesForEach { get; set; }
+            public NumberOfBabiesForEachPregnancy NumberOfBabiesForEachPregnancy { get; set; }
         }
         public class ColdStart
         {
@@ -38,7 +38,7 @@ namespace CoopSimulator.Data
                 get { return _value; }
                 set
                 {
-                    if (DatePeriod== Enums.DatePeriod.Year)
+                    if (DatePeriod == Enums.DatePeriod.Year)
                     {
                         _value = 365 * value;
                     }
@@ -173,7 +173,7 @@ namespace CoopSimulator.Data
 
         public class Configuration
         {
-            public ColdStart ColdStart {get; set; }
+            public ColdStart ColdStart { get; set; }
             public PoultryDetail PoultryDetail { get; set; }
             public GlobalSetting GlobalSetting { get; set; }
         }

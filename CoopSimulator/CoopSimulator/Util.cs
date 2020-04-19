@@ -7,6 +7,10 @@ namespace CoopSimulator
 {
     public class Util
     {
+        public static void Init()
+        {
+            new Threads();
+        }
         public static Data.ConfigurationDto.Configuration Configuration()
         {
             Data.ConfigurationDto.Configuration configuration = null;
@@ -23,7 +27,7 @@ namespace CoopSimulator
                             .DeserializeObject<Data.ConfigurationDto.Configuration>(json);
                 }
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
               
             }

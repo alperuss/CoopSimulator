@@ -8,7 +8,7 @@ namespace CoopSimulator.Helper
     {
         public static int MonthDifferenceBetweenTwoDate(DateTime startDate, DateTime endDate)
         {
-            return (endDate.Year - startDate.Year ) * 12 + startDate.Month - endDate.Month;
+            return (endDate.Year - startDate.Year ) * 12 + endDate.Month - startDate.Month ;
         }
 
         public static int WeekDifferenceBetweenTwoDate(DateTime startDate, DateTime endDate)
